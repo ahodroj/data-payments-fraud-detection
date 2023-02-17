@@ -1,15 +1,15 @@
 # SQL Processing Approach in Snowflake
 
 ## group by senders and receivers to analyze the data 
-''''
-select namedest, sum(amount) sum_amount, count(*) txn_count 
-	from payments group by namedest 
-    order by txn_count;
-    
-select nameorig, sum(amount) sum_amount, count(*) txn_count 
-	from payments group by nameorig 
-    order by txn_count;
-''''
+
+	select namedest, sum(amount) sum_amount, count(*) txn_count 
+		from payments group by namedest 
+	    order by txn_count;
+	    
+	select nameorig, sum(amount) sum_amount, count(*) txn_count 
+		from payments group by nameorig 
+	    order by txn_count;
+	
 
 ##  largest degree between participants and 
 select namedest, sum(amount) sum_amount, count(*) txn_count 
