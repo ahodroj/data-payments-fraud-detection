@@ -1,7 +1,7 @@
 # SQL Processing Approach in Snowflake
 
 ## group by senders and receivers to analyze the data 
-'''
+''''
 select namedest, sum(amount) sum_amount, count(*) txn_count 
 	from payments group by namedest 
     order by txn_count;
